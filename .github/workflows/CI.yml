@@ -72,6 +72,7 @@ jobs:
           name: bindings-${{ matrix.settings.target }}
           path: '*.node'
           if-no-files-found: error
+          retention-days: 1
 
   publish:
     if: github.event_name == 'release'
@@ -93,7 +94,7 @@ jobs:
 
       - run: npx napi create-npm-dirs
 
-      - run: npx napi artifacts --dir artifacts
+      - run: npx napi artifacts
 
       - run: npm publish --provenance --access public
         env:
