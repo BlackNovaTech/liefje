@@ -8,6 +8,10 @@
     "index.d.ts",
     "index.js"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blacknovatech/liefje.git"
+  },
   "napi": {
     "binaryName": "liefje",
     "targets": [
